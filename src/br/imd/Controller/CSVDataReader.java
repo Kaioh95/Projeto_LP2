@@ -2,14 +2,21 @@ package br.imd.Controller;
 
 import java.io.FileReader;
 import java.util.List;
-//import com.opencsv.CSVReader;
-//import com.opencsv.CSVReaderBuilder;
 import com.opencsv.*;
 
 public class CSVDataReader {
-    private static final String csv_path = "C:\\Users\\Usuario\\Documents\\Projeto_LP2\\dataset.csv";
+    private static final String csv_path = "data&libs\\dataset.csv";
+    private List<String[]> dataset;
 
-    public static void readAllData(String file){
+    public List<String[]> getDataset() {
+        return dataset;
+    }
+
+    public void setDataset(List<String[]> dataset) {
+        this.dataset = dataset;
+    }
+
+    public void readAllData(String file){
         try{
             //Create an object with the path
             //of the CSV file as a parameter
@@ -27,15 +34,18 @@ public class CSVDataReader {
                 }
                 System.out.println();
             }
+            this.dataset = dataset;
         }
         catch(Exception e){
             e.printStackTrace();
         }
     }
-
+    /*
     public static void main(String[] args) {
+        CSVDataReader csv = new CSVDataReader();
         System.out.println("print the DateSet without the header");
-        readAllData(csv_path);
-        System.out.println("_____________________________________________________");
+        csv.readAllData(csv_path);
+        System.out.println("________________________________________________________________________________");
     }
+    */
 }
