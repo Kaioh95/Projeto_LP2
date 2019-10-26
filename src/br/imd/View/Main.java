@@ -1,7 +1,9 @@
 package br.imd.View;
 
 import org.opencv.core.Core;
-
+import java.util.List;
+import br.imd.Controller.*;
+/*
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.HOGDescriptor;
@@ -10,10 +12,38 @@ import org.opencv.core.Mat;
 import org.opencv.core.MatOfFloat;
 import org.opencv.core.Size;
 import java.util.List;
+*/
 
 public class Main {
     static{
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+    }
+
+    public static void k_nn(List<String[]> imgs, List<Float> imgx){
+        int x = 1;
+        for(String[] img: imgs){
+            System.out.println(x + " distance: " + euclideanDistance(img, imgx));
+            x += 1;
+        }
+    }
+    public static double euclideanDistance(String[] img, List<Float> x){
+        double distance = 0;
+        for(int i=0; i < x.size(); i++){
+            double xi = x.get(i).doubleValue();
+            double yi = Double.parseDouble(img[i]);
+            distance += Math.pow(xi - yi, 2);
+        }
+        return Math.sqrt(distance);
+    }
+
+    public static void main(String[] args) {
+        CSVDataReader data = new CSVDataReader();
+        data.readAllData("data&libs\\dataset.csv");
+
+        FeatureExtraction fext = new FeatureExtraction();
+        List<Float> imgFeatures = fext.extract("C:\\Users\\Usuario\\Pictures\\img2.png");
+
+        k_nn(data.getDataset(), imgFeatures);
     }
 /*
     public static void main(String[] args) {
