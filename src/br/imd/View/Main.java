@@ -1,18 +1,10 @@
 package br.imd.View;
 
+import br.imd.Control.CSVDataReader;
+import br.imd.Control.FeatureExtraction;
 import org.opencv.core.Core;
-import java.util.List;
-import br.imd.Controller.*;
-/*
-import org.opencv.imgcodecs.Imgcodecs;
-import org.opencv.imgproc.Imgproc;
-import org.opencv.objdetect.HOGDescriptor;
 
-import org.opencv.core.Mat;
-import org.opencv.core.MatOfFloat;
-import org.opencv.core.Size;
 import java.util.List;
-*/
 
 public class Main {
     static{
@@ -23,6 +15,7 @@ public class Main {
         int x = 1;
         for(String[] img: imgs){
             System.out.println(x + " distance: " + euclideanDistance(img, imgx));
+            System.out.println(x + " distance: " + manhattanDistance(img, imgx));
             x += 1;
         }
     }
@@ -36,12 +29,22 @@ public class Main {
         return Math.sqrt(distance);
     }
 
+    public static double manhattanDistance(String[] img, List<Float> x) {
+        double distance = 0;
+        for (int i = 0; i < x.size(); i++) {
+            double xi = x.get(i).doubleValue();
+            double yi = Double.parseDouble(img[i]);
+            distance += Math.abs(xi - yi);
+        }
+        return distance;
+    }
+
     public static void main(String[] args) {
         CSVDataReader data = new CSVDataReader();
-        data.readAllData("data&libs\\dataset.csv");
+        data.readAllData("data/dataset.csv");
 
         FeatureExtraction fext = new FeatureExtraction();
-        List<Float> imgFeatures = fext.extract("C:\\Users\\Usuario\\Pictures\\img2.png");
+        List<Float> imgFeatures = fext.extract("data/sampleimage.png");
 
         k_nn(data.getDataset(), imgFeatures);
     }

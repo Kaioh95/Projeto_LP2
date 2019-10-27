@@ -1,11 +1,12 @@
-package br.imd.Controller;
+package br.imd.Control;
+
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
 
 import java.io.FileReader;
 import java.util.List;
-import com.opencsv.*;
 
 public class CSVDataReader {
-    private static final String csv_path = "data&libs\\dataset.csv";
     private List<String[]> dataset;
 
     public List<String[]> getDataset() {
@@ -28,6 +29,7 @@ public class CSVDataReader {
             List<String[]> dataset = csvReader.readAll();
 
             //Just to text we going to print data
+
             for(String[] row: dataset){
                 for(String cell: row){
                     System.out.print(cell + ", ");
@@ -35,11 +37,13 @@ public class CSVDataReader {
                 System.out.println();
             }
             this.dataset = dataset;
+
         }
         catch(Exception e){
             e.printStackTrace();
         }
     }
+
     /*
     public static void main(String[] args) {
         CSVDataReader csv = new CSVDataReader();
