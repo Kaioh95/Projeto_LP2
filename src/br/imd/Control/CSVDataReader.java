@@ -7,7 +7,10 @@ import java.io.FileReader;
 import java.util.List;
 
 public class CSVDataReader {
+    private static final String csv_path = "data/dataset.csv";
     private List<String[]> dataset;
+
+    public String getCsv_path(){ return csv_path; }
 
     public List<String[]> getDataset() {
         return dataset;

@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3e11d35-0409-4ac0-92e4-82bced66c4f5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/opencsv_5_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/opencsv_5_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/opencv_411.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto_LP2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto_LP2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_LP2/META-INF/Projeto_LP2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_LP2/br/imd/Control/CSVDataReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_LP2/br/imd/Control/CSVDataReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_LP2/br/imd/Model/permanent.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_LP2/br/imd/View/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_LP2/br/imd/View/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/imd/Control/CSVDataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Control/CSVDataReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/imd/Model/HeapTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Model/HeapTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/imd/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/View/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +40,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/commons-lang3-3.9" />
+    <property name="last_opened_file_path" value="C:/opencv/build/java/x64" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />

@@ -1,30 +1,29 @@
-package com.heap.tree;
+package br.imd.Model;
 
 import java.util.Arrays;
 
 public class HeapTree {
-
-    private Pessoa[] pessoas;
+    private Node[] myHeap;
     private int size; //how many elements the array has
     private int capacity; //how many elements the array can have
 
     public HeapTree() {
-        this(10);
+        this(100);
     }
 
     public HeapTree(int capacity) {
-        pessoas = new Pessoa[capacity];
+        myHeap = new Node[capacity];
         this.size = 0;
         this.capacity = capacity;
     }
 
-    public void addPessoa(String nome, int idade) {
-        addPessoa(new Pessoa(nome, idade));
+    public void addNode(double key, String[] content) {
+        addNode(new Node(key, content));
     }
 
-    public void addPessoa(Pessoa pessoa) {
+    public void addNode(Node node) {
         this.ensureCapacity();
-        this.pessoas[getSize()] = pessoa;
+        this.myHeap[getSize()] = node;
         heapifyUp(getSize());
         size++;
     }
@@ -34,14 +33,16 @@ public class HeapTree {
             return;
         }
         int parentIndex = getParentIndex(index);
-        Pessoa node = pessoas[index];
-        Pessoa pai = pessoas[parentIndex];
+        Node node = myHeap[index];
+        Node parent = myHeap[parentIndex];
 
-        if (node.getIdade() > pai.getIdade()) {
-            pessoas[index] = pai;
-            pessoas[parentIndex] = node;
+        if (node.getKey() > parent.getKey()) {
+            myHeap[index] = parent;
+            myHeap[parentIndex] = node;
             heapifyUp(parentIndex);
         }
+        parent = null;
+        node = null;
     }
 
     private boolean hasParent(int index) {
@@ -54,7 +55,7 @@ public class HeapTree {
 
     private void ensureCapacity() {
         if (getSize() == capacity) {
-            this.pessoas = Arrays.copyOf(this.pessoas, getSize() * 2);
+            this.myHeap = Arrays.copyOf(this.myHeap, getSize() * 2);
             capacity = getSize() * 2;
         }
     }
@@ -63,16 +64,16 @@ public class HeapTree {
         return size;
     }
 
-    public Pessoa peek() {
+    public Node[] peek(int k) {
         if (getSize() == 0) {
             return null;
         }
-        return pessoas[0];
+        return Arrays.copyOfRange(myHeap, 0, k);
     }
 
     public void remove() {
-        pessoas[0] = pessoas[getSize() - 1];
-        pessoas[getSize() - 1] = null;
+        myHeap[0] = myHeap[getSize() - 1];
+        myHeap[getSize() - 1] = null;
         size--;
         heapifyDown(0);
     }
@@ -91,47 +92,63 @@ public class HeapTree {
         }
 
         if (rightChild < getSize()) {
-            if (pessoas[rightChild].getIdade() > pessoas[leftChild].getIdade()) {
+            if (myHeap[rightChild].getKey() > myHeap[leftChild].getKey()) {
                 childIndex = rightChild;
             }
         }
 
-        if (pessoas[index].getIdade() < pessoas[childIndex].getIdade()) {
-            Pessoa tmp = pessoas[index];
-            pessoas[index] = pessoas[childIndex];
-            pessoas[childIndex] = tmp;
+        if (myHeap[childIndex].getKey() > myHeap[index].getKey()) {
+            Node tmp = myHeap[index];
+            myHeap[index] = myHeap[childIndex];
+            myHeap[childIndex] = tmp;
+            tmp = null;
             heapifyDown(childIndex);
         }
     }
 
-    public Pessoa[] heap() {
-        if (size != 1) {
-            Pessoa auxiliar;
-            auxiliar = pessoas[getSize() - 1];
-            pessoas[getSize() - 1] = pessoas[0];
-            pessoas[0] = auxiliar;
+    public void heapSort() {
+        for(int i = getSize()-1; i>0; --i){
+            Node aux = myHeap[i];
+            myHeap[i] = myHeap[0];
+            myHeap[0] = aux;
             size--;
-            heapifyDown(0);
-            return heapSort();
-        } else {
-            return pessoas;
+            heapifyDown(0, i);
         }
     }
 
-    public Pessoa[] heapSort() {
-        com.heap.tree.HeapTree fila = new com.heap.tree.HeapTree();
-        fila.pessoas = Arrays.copyOfRange(this.pessoas, 0, this.size);
-        fila.size = size;
-        fila.capacity = capacity;
-        return fila.heap();
+    public void heapifyDown(int index, int length){
+        int leftChild = index*2+1;
+        int rightChild = index*2+2;
+
+        int maxIndex = index;
+
+        if(leftChild < length && myHeap[leftChild].getKey() > myHeap[index].getKey()){
+            maxIndex = leftChild;
+        }
+
+        if(rightChild < length && myHeap[rightChild].getKey() > myHeap[maxIndex].getKey()){
+            maxIndex = rightChild;
+        }
+
+        if(maxIndex != index){
+            Node tmp = myHeap[maxIndex];
+            myHeap[maxIndex] = myHeap[index];
+            myHeap[index] = tmp;
+            tmp = null;
+            heapifyDown(maxIndex, length);
+        }
+    }
+
+    public void fillNa(){
+        Arrays.fill(myHeap, null);
     }
 
     @Override
     public String toString() {
-        String ultimo = null;
-        for (Pessoa pessoa: pessoas) {
-            ultimo = ultimo + pessoa.toString();
+        String first = null;
+        for (Node node: myHeap) {
+            first = first + node.toString();
         }
-        return ultimo;
+        return first;
     }
 }

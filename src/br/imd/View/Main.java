@@ -2,6 +2,8 @@ package br.imd.View;
 
 import br.imd.Control.CSVDataReader;
 import br.imd.Control.FeatureExtraction;
+import br.imd.Model.HeapTree;
+import br.imd.Model.Node;
 import org.opencv.core.Core;
 
 import java.util.List;
@@ -11,14 +13,27 @@ public class Main {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
     }
 
-    public static void k_nn(List<String[]> imgs, List<Float> imgx){
+    public static void k_nn(List<String[]> imgs, List<Float> imgx, int k){
         int x = 1;
+        HeapTree rankedImgs = new HeapTree();
+
         for(String[] img: imgs){
-            System.out.println(x + " distance: " + euclideanDistance(img, imgx));
-            System.out.println(x + " distance: " + manhattanDistance(img, imgx));
+            rankedImgs.addNode(euclideanDistance(img, imgx), img);
+            System.out.println(x + " distance: " + euclideanDistance(img, imgx) + " " + img[img.length-1]);
             x += 1;
         }
+
+        rankedImgs.heapSort();
+        System.out.println(rankedImgs.toString());
+        Node[] rank = new Node[3];
+        rank = rankedImgs.peek(k);
+        rankedImgs.fillNa();
+        for(Node node: rank){
+            System.out.println(node.toString());
+            node = null;
+        }
     }
+
     public static double euclideanDistance(String[] img, List<Float> x){
         double distance = 0;
         for(int i=0; i < x.size(); i++){
@@ -39,14 +54,25 @@ public class Main {
         return distance;
     }
 
+    public static double chebychevDistance(String[] img, List<Float> x) {
+        double distance = 0;
+        for (int i = 0; i < x.size(); i++) {
+            double xi = x.get(i).doubleValue();
+            double yi = Double.parseDouble(img[i]);
+            if( (xi - yi) > distance)
+                distance = xi - yi;
+        }
+        return distance;
+    }
+
     public static void main(String[] args) {
         CSVDataReader data = new CSVDataReader();
-        data.readAllData("data/dataset.csv");
+        data.readAllData(data.getCsv_path());
 
         FeatureExtraction fext = new FeatureExtraction();
-        List<Float> imgFeatures = fext.extract("data/sampleimage.png");
+        List<Float> imgFeatures = fext.extract("data/img2.png");
 
-        k_nn(data.getDataset(), imgFeatures);
+        k_nn(data.getDataset(), imgFeatures, 3);
     }
 /*
     public static void main(String[] args) {
