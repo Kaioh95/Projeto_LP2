@@ -1,9 +1,8 @@
 package br.imd.View;
 
-import br.imd.Control.CSVDataReader;
-import br.imd.Control.FeatureExtraction;
-import br.imd.Model.HeapTree;
-import br.imd.Model.Node;
+import br.imd.Controller.CSVDataReader;
+import br.imd.Controller.FeatureExtraction;
+import br.imd.Model.KNNAlgorithm;
 import org.opencv.core.Core;
 
 import java.util.List;
@@ -13,13 +12,15 @@ public class Main {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
     }
 
+    /*
+
     public static void k_nn(List<String[]> imgs, List<Float> imgx, int k){
         int x = 1;
         HeapTree rankedImgs = new HeapTree();
 
         for(String[] img: imgs){
-            rankedImgs.addNode(euclideanDistance(img, imgx), img);
-            System.out.println(x + " distance: " + euclideanDistance(img, imgx) + " " + img[img.length-1]);
+            rankedImgs.addNode(distance(img, imgx), img);
+            System.out.println(x + " distance: " + distance(img, imgx) + " " + img[img.length-1]);
             x += 1;
         }
 
@@ -34,6 +35,10 @@ public class Main {
         }
     }
 
+    */
+
+    /*
+
     public static double euclideanDistance(String[] img, List<Float> x){
         double distance = 0;
         for(int i=0; i < x.size(); i++){
@@ -44,6 +49,11 @@ public class Main {
         return Math.sqrt(distance);
     }
 
+    */
+
+    /*
+
+
     public static double manhattanDistance(String[] img, List<Float> x) {
         double distance = 0;
         for (int i = 0; i < x.size(); i++) {
@@ -53,6 +63,10 @@ public class Main {
         }
         return distance;
     }
+
+    */
+
+    /*
 
     public static double chebychevDistance(String[] img, List<Float> x) {
         double distance = 0;
@@ -65,6 +79,8 @@ public class Main {
         return distance;
     }
 
+    */
+
     public static void main(String[] args) {
         CSVDataReader data = new CSVDataReader();
         data.readAllData(data.getCsv_path());
@@ -72,20 +88,21 @@ public class Main {
         FeatureExtraction fext = new FeatureExtraction();
         List<Float> imgFeatures = fext.extract("data/img2.png");
 
-        k_nn(data.getDataset(), imgFeatures, 3);
-    }
-/*
-    public static void main(String[] args) {
+        KNNAlgorithm k_nn = new KNNAlgorithm();
+        k_nn.k_nn(data.getDataset(), imgFeatures, 3);
+
+        /*
+
         HOGDescriptor hog = new HOGDescriptor();
         Mat img = new Mat();
         MatOfFloat features = new MatOfFloat();
-
-        img = Imgcodecs.imread("C:\\Users\\Usuario\\Pictures\\img1.png", Imgcodecs.IMREAD_GRAYSCALE);
+        img = Imgcodecs.imread("data/img1.png", Imgcodecs.IMREAD_GRAYSCALE);
         Imgproc.resize(img, img, new Size(64, 128), 0.5, 0.5, Imgproc.INTER_LINEAR);
         hog.compute(img, features);
         List<Float> arrayOfFeatures = features.toList();
         System.out.println(arrayOfFeatures.toString());
+
+        */
     }
 
- */
 }

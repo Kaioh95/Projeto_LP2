@@ -2,6 +2,7 @@
   <library name="opencsv-5.0">
     <CLASSES>
       <root url="jar://C:/opencv/opencsv-5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/opencsv-5.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

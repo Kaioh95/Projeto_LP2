@@ -1,4 +1,4 @@
-package br.imd.Control;
+package br.imd.Controller;
 
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;

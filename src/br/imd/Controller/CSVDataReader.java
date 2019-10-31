@@ -1,4 +1,4 @@
-package br.imd.Control;
+package br.imd.Controller;
 
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.util.List;
 
 public class CSVDataReader {
-    private static final String csv_path = "data/dataset.csv";
+    private static final String csv_path = "data/dataset_2019_1.csv";
     private List<String[]> dataset;
 
     public String getCsv_path(){ return csv_path; }
