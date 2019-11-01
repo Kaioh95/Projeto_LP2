@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3e11d35-0409-4ac0-92e4-82bced66c4f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/Thumbs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Projeto_LP2/br/imd/View/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_LP2/br/imd/View/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/imd/Controller/CSVDataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Controller/CSVDataReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/imd/Controller/FeatureExtraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Controller/FeatureExtraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/imd/Model/KNNAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Model/KNNAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_LP2/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_LP2/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_LP2/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_LP2/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_LP2/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_LP2/sample/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/imd/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/View/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +40,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/opencv/build/java/x64/opencv_java411.dll" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -63,7 +64,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="CSVDataReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.imd.Controller.CSVDataReader" />
       <module name="Projeto_LP2" />
@@ -105,9 +106,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.CSVDataReader" />
-        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
