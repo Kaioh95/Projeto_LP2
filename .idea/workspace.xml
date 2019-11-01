@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3e11d35-0409-4ac0-92e4-82bced66c4f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/opencv_411.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/imd/Model/Distance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/imd/Model/KNNAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/opencsv_5_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/opencsv_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Magusk_A__Lutus.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/imd/Model/EuclideanDistance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/imd/Model/ManhattanDistance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto_LP2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto_LP2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataset.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto_LP2/br/imd/Control/CSVDataReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto_LP2/br/imd/Control/FeatureExtraction.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Projeto_LP2/br/imd/View/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_LP2/br/imd/View/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto_LP2/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_LP2/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/imd/Control/CSVDataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Controller/CSVDataReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/imd/Control/FeatureExtraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Controller/FeatureExtraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/imd/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/View/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/imd/Model/Distance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Model/Distance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/imd/Model/KNNAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Model/KNNAlgorithm.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +123,8 @@
       <workItem from="1572151040377" duration="7144000" />
       <workItem from="1572199663892" duration="2911000" />
       <workItem from="1572208632467" duration="946000" />
-      <workItem from="1572535038876" duration="435000" />
+      <workItem from="1572535038876" duration="721000" />
+      <workItem from="1572565611919" duration="1517000" />
     </task>
     <task id="LOCAL-00001" summary="Manhattan distance method added to Main class;&#10;Added HeapTree class to &quot;Model&quot; (needs rework);&#10;Changed &quot;Controller&quot; to &quot;Control&quot;;&#10;Changed &quot;data&amp;libs&quot; folder to 2 separate folders, &quot;data&quot; and &quot;lib&quot;;&#10;Moved &quot;dataset.csv&quot; to &quot;data&quot;;&#10;Added sampleimage.png to &quot;data&quot;;&#10;Added &quot;lib&quot; folder to gitignore;">
       <created>1572209219480</created>
@@ -141,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572209219480</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Distance class with euclidean, manhattan and chebychev methods;&#10;Added KNNAlgorithm class;&#10;Small changes on Main, CVSDataReader and FeatureExtractor.">
+      <created>1572535675724</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572535675724</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +161,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Manhattan distance method added to Main class;&#10;Added HeapTree class to &quot;Model&quot; (needs rework);&#10;Changed &quot;Controller&quot; to &quot;Control&quot;;&#10;Changed &quot;data&amp;libs&quot; folder to 2 separate folders, &quot;data&quot; and &quot;lib&quot;;&#10;Moved &quot;dataset.csv&quot; to &quot;data&quot;;&#10;Added sampleimage.png to &quot;data&quot;;&#10;Added &quot;lib&quot; folder to gitignore;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Manhattan distance method added to Main class;&#10;Added HeapTree class to &quot;Model&quot; (needs rework);&#10;Changed &quot;Controller&quot; to &quot;Control&quot;;&#10;Changed &quot;data&amp;libs&quot; folder to 2 separate folders, &quot;data&quot; and &quot;lib&quot;;&#10;Moved &quot;dataset.csv&quot; to &quot;data&quot;;&#10;Added sampleimage.png to &quot;data&quot;;&#10;Added &quot;lib&quot; folder to gitignore;" />
+    <MESSAGE value="Added Distance class with euclidean, manhattan and chebychev methods;&#10;Added KNNAlgorithm class;&#10;Small changes on Main, CVSDataReader and FeatureExtractor." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Distance class with euclidean, manhattan and chebychev methods;&#10;Added KNNAlgorithm class;&#10;Small changes on Main, CVSDataReader and FeatureExtractor." />
   </component>
 </project>

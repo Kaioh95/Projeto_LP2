@@ -9,11 +9,11 @@ public class KNNAlgorithm {
     public void k_nn(List<String[]> imgs, List<Float> imgx, int k){
         int x = 1;
         HeapTree rankedImgs = new HeapTree();
-        Distance distance = new Distance();
+        EuclideanDistance euclidean = new EuclideanDistance();
 
         for(String[] img: imgs){
-            rankedImgs.addNode(distance.euclidean(img, imgx), img);
-            System.out.println(x + " distance: " + distance.euclidean(img, imgx) + " " + img[img.length-1]);
+            rankedImgs.addNode(euclidean.distance(img, imgx), img);
+            System.out.println(x + " distance: " + euclidean.distance(img, imgx) + " " + img[img.length-1]);
             x += 1;
         }
 
