@@ -47,12 +47,4 @@ public class CSVDataReader {
         }
     }
 
-    /*
-    public static void main(String[] args) {
-        CSVDataReader csv = new CSVDataReader();
-        System.out.println("print the DateSet without the header");
-        csv.readAllData(csv_path);
-        System.out.println("________________________________________________________________________________");
-    }
-    */
 }

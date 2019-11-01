@@ -86,10 +86,10 @@ public class Main {
         data.readAllData(data.getCsv_path());
 
         FeatureExtraction fext = new FeatureExtraction();
-        List<Float> imgFeatures = fext.extract("data/img2.png");
+        List<Float> imgFeatures = fext.extract("data/sampleimage.png");
 
         KNNAlgorithm k_nn = new KNNAlgorithm();
-        k_nn.k_nn(data.getDataset(), imgFeatures, 3);
+        k_nn.k_nn(data.getDataset(), imgFeatures, 3, 1);
 
         /*
 

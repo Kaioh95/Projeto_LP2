@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3e11d35-0409-4ac0-92e4-82bced66c4f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Magusk_A__Lutus.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/imd/Model/EuclideanDistance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/imd/Model/ManhattanDistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/Thumbs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Projeto_LP2/br/imd/View/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_LP2/br/imd/View/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/imd/Model/Distance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Model/Distance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/imd/Controller/CSVDataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Controller/CSVDataReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/imd/Controller/FeatureExtraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Controller/FeatureExtraction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/imd/Model/KNNAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Model/KNNAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/imd/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/View/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
