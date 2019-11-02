@@ -36,7 +36,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="imagePath" promptText="example\image.png" GridPane.rowIndex="1" GridPane.valignment="TOP">
+      <TextField fx:id="imagePath" onKeyReleased="#blockRunButton" promptText="example\image.png" GridPane.rowIndex="1" GridPane.valignment="TOP">
          <GridPane.margin>
             <Insets left="10.0" />
          </GridPane.margin>

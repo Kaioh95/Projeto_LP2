@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.opencv.core.Core;
 
 import java.io.File;
 import java.net.URL;
@@ -13,6 +14,10 @@ public class Main extends Application {
     private static Stage stage;
     private static Scene main;
     private static Scene run;
+
+    static{
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -40,21 +45,3 @@ public class Main extends Application {
         return stage;
     }
 }
-/*
-public class Main {
-    static{
-        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-    }
-
-    public static void main(String[] args) {
-        CSVDataReader data = new CSVDataReader();
-        data.readAllData(data.getCsv_path());
-
-        FeatureExtraction fext = new FeatureExtraction();
-        List<Float> imgFeatures = fext.extract("data/sampleimage.png");
-
-        KNNAlgorithm k_nn = new KNNAlgorithm();
-        k_nn.k_nn(data.getDataset(), imgFeatures, 3, 1);
-    }
-*/
-

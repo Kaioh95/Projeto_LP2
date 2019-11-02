@@ -29,6 +29,6 @@ public class Node {
 
     @Override
     public String toString(){
-        return "Distância: " + key + ", " + content[content.length-1] + "\n";
+        return "Distance: " + key + ", " + content[content.length-1] + "\n";
     }
 }

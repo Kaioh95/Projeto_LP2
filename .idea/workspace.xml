@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d3e11d35-0409-4ac0-92e4-82bced66c4f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/imd/Controller/CSVDataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Controller/CSVDataReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/imd/Controller/FXMLMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Controller/FXMLMainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/imd/Model/KNNAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Model/KNNAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/imd/Model/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/Model/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/imd/View/FXMLMain.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/View/FXMLMain.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/imd/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/imd/View/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
