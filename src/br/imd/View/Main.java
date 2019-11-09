@@ -13,7 +13,7 @@ import java.net.URL;
 public class Main extends Application {
     private static Stage stage;
     private static Scene main;
-    private static Scene run;
+    //private static Scene run;
 
     static{
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
@@ -21,12 +21,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        /*
-        Parent root = FXMLLoader.load(getClass().getResource("br.imd.View.FXMLMain.fxml"));
-        primaryStage.setTitle("Person Detector");
-        primaryStage.setScene(new Scene(root, 600, 480));
-        primaryStage.show();
-        */
         stage = primaryStage;
         stage.setTitle("Person Detector");
         URL url = new File("src/br/imd/View/FXMLMain.fxml").toURI().toURL();
@@ -45,3 +39,10 @@ public class Main extends Application {
         return stage;
     }
 }
+
+    /*
+        Parent root = FXMLLoader.load(getClass().getResource("br.imd.View.FXMLMain.fxml"));
+        primaryStage.setTitle("Person Detector");
+        primaryStage.setScene(new Scene(root, 600, 480));
+        primaryStage.show();
+    */

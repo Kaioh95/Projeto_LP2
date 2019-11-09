@@ -3,17 +3,12 @@ package br.imd.Model;
 import java.util.List;
 
 public class KNNAlgorithm {
-    private List<String[]> allImages;
-    private List<Float> imageX;
-    private HeapTree rankedImgs;
     private Node[] neighbours;
 
     public KNNAlgorithm() {}
 
-    public void k_nn(List<String[]> imgs, List<Float> imgx, int k, int option){
+    public void k_nn(List<String[]> allImages, List<Float> imageX, int k, int option){
         Distance similarityMeasure;
-        this.allImages = imgs;
-        this.imageX = imgx;
 
         //Setting the Distance
         if(option == 1)
@@ -23,23 +18,20 @@ public class KNNAlgorithm {
         else
             similarityMeasure = new ChebychevDistance();
 
-        rankingImages(similarityMeasure, k);
-    }
-
-    public void rankingImages(Distance similarityMeasure, int k){
+        //Ranking Process Ahead
         int x = 1;
-        this.rankedImgs = new HeapTree();
+        HeapTree rankedImgs = new HeapTree();
 
         //Calculating the distance of the input image
         //from each image in the dataset.
         for(String[] img: allImages){
-            this.rankedImgs.addNode(similarityMeasure.distance(img, this.imageX), img);
-            System.out.println(x + " distance: " + similarityMeasure.distance(img, this.imageX) + " " + img[img.length-1]);
+            rankedImgs.addNode(similarityMeasure.distance(img, imageX), img);
+            System.out.println(x + " distance: " + similarityMeasure.distance(img, imageX) + " " + img[img.length-1]);
             x += 1;
         }
 
         //Ranking images by distance
-        this.rankedImgs.heapSort();
+        rankedImgs.heapSort();
         System.out.println(rankedImgs.toString());
 
         //Catching the K images
@@ -81,53 +73,4 @@ public class KNNAlgorithm {
         //return results;
     }
 
-    /*
-    public void k_nn(List<String[]> imgs, List<Float> imgx, int k, int option){
-        int x = 1;
-        int person = 0;
-        int noPerson = 0;
-        Distance similarityMeasure;
-        HeapTree rankedImgs = new HeapTree();
-
-        //Setting the Distance
-        if(option == 1)
-            similarityMeasure = new EuclideanDistance();
-        else if(option == 2)
-            similarityMeasure = new ManhattanDistance();
-        else
-            similarityMeasure = new ChebychevDistance();
-
-        //Calculating the distance of the input image
-        //from each image in the dataset.
-        for(String[] img: imgs){
-            rankedImgs.addNode(similarityMeasure.distance(img, imgx), img);
-            System.out.println(x + " distance: " + similarityMeasure.distance(img, imgx) + " " + img[img.length-1]);
-            x += 1;
-        }
-
-        //Ranking images by distance
-        rankedImgs.heapSort();
-        System.out.println(rankedImgs.toString());
-
-        //Catching the K images
-        Node[] rank = new Node[k];
-        rank = rankedImgs.peek(k);
-        rankedImgs.fillNa();
-
-        for(Node node: rank){
-            System.out.println(node.toString());
-            if(node.getContent()[node.getContent().length-1].equals("person"))
-                person += 1;
-            else
-                noPerson += 1;
-        }
-
-        //Making predictions
-        if(person > noPerson){
-            System.out.println("There are people in the picture!");
-        }
-        else
-            System.out.println("There are no people in the picture!");
-    }
-    */
 }

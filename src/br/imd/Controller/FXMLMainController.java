@@ -38,7 +38,11 @@ public class FXMLMainController{
 
     @FXML
     void aboutAction(ActionEvent event) {
-
+        Alert about = new Alert(Alert.AlertType.INFORMATION);
+        about.setTitle("Person Detector");
+        about.setHeaderText("Built on November 31, 2019");
+        about.setContentText("Authors: Alex Barbosa da Silva Felix, Kaio Henrique de Sousa.");
+        about.show();
     }
 
     public void initialize(){
@@ -71,6 +75,7 @@ public class FXMLMainController{
         } catch (NullPointerException ex){
             imagePath.setText("Invalid Path");
         }
+        runButton.setDisable(false);
     }
 
     @FXML
@@ -97,7 +102,7 @@ public class FXMLMainController{
         List<Float> imgFeatures = fext.extract(imagePath.getText());
 
         KNNAlgorithm k_nn = new KNNAlgorithm();
-        k_nn.k_nn(data.getDataset(), imgFeatures, 3, option);
+        k_nn.k_nn(data.getDataset(), imgFeatures, 9, option);
 
         Alert result = new Alert(Alert.AlertType.INFORMATION);
         result.setTitle("Results");

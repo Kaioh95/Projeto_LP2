@@ -31,16 +31,6 @@ public class CSVDataReader {
             CSVReader csvReader = new CSVReaderBuilder(filereader).withSkipLines(1).build();
             List<String[]> dataset = csvReader.readAll();
 
-            //Just to text we going to print data
-            /*
-            for(String[] row: dataset){
-                for(String cell: row){
-                    System.out.print(cell + ", ");
-                }
-                System.out.println();
-            }
-
-             */
             this.dataset = dataset;
 
         }
