@@ -8,5 +8,5 @@ O presente projeto tem como obejtivo a detecção de pessoas em imagens utilizan
 
 
 	DUPLA:
-	Alex Barbosa Félix da Silva
+	Alex Barbosa Felix da Silva
 	Kaio Henrique de Sousa

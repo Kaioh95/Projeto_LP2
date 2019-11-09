@@ -1,0 +1,50 @@
+Person Detector - Dependências e instalação
+
+
+LINK DAS BIBLIOTECAS UTILIZADAS:
+	1.Apache para leitura de arquivos csv - http://commons.apache.org/proper/commons-lang/download_lang.cgi
+	2.OpenCSV juntamente com Apache - https://sourceforge.net/projects/opencsv/
+	3.OpenCV - https://opencv.org/releases/
+
+
+ATENÇÃO!!!: 
+	openCSV é diferente do openCV;
+
+	Note que o "dataset_2019_1.csv" está localizado na pasta "data" do projeto
+	ao mudar o arquivo de pasta, é preciso alterar o atributo "csvPath" da classe CSVDataReader.
+
+
+CONFIGURAÇÃO NO ECLIPSE:
+
+
+1.Apache:
+
+1.1	Click com o Botão direito do mouse em Build Path -> Configure Build Path...;
+	
+1.2	Na aba Libraries, click em Add External JARS...;
+		Navegue até a pasta "commons-lang3.3.9" que é gerada após
+		a extração do .zip de nome correspondente e selecione
+		o "commons-lang3-3.9.jar".
+
+
+2.OpenCSV:
+
+2.1	Click com o Botão direito do mouse em Build Path -> Configure Build Path...
+	
+2.2	Na aba Libraries, click em Add External JARS...:
+		selecione o "opencsv-5.0.jar" baixado anteriormente.
+
+
+3.OpenCV:
+
+3.1	Click com o Botão direito do mouse em Build Path -> Configure Build Path...
+	
+3.2	Na aba Libraries, click em Add Library...:
+
+3.2.1		Na Janela aberta selecione Use Library, depois em User Libraries...;
+3.2.2		Click em New... e escolha um nome para a sua biblioteca
+3.2.3		Click em Add External JARs..., selecione o "opencv-411.jar"
+		que é encontrado na pasta ".../opencv/build/java";
+3.2.4		Agora selecione "Native library location" e click em Edit...
+		selecione o caminho ".../opencv/build/java/x64".
+
